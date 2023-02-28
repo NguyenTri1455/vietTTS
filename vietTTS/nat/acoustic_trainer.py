@@ -160,8 +160,7 @@ def train():
             plt.close()
 
             # saving checkpoint
-            filename = str(ckpt_fn).replace("_ckpt", "_ckpt_"+str(step))
-            with open(filename, "wb") as f:
+            with open(FLAGS.ckpt_dir / f"acoustic_latest_ckpt_{step:06d}.pickle", "wb") as f:
                 pickle.dump(
                     {
                         "step": step,

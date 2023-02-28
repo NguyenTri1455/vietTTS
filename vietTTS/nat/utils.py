@@ -22,6 +22,8 @@ def save_ckpt(step, params, aux, rng, optim_state, ckpt_dir: Path):
         "rng": rng,
         "optim_state": optim_state,
     }
+    with open(ckpt_dir / f"duration_latest_ckpt_{step:06d}.pickle", "wb") as f:
+        pickle.dump(dic, f)
     with open(ckpt_dir / "duration_latest_ckpt.pickle", "wb") as f:
         pickle.dump(dic, f)
 
