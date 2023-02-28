@@ -160,6 +160,18 @@ def train():
             plt.close()
 
             # saving checkpoint
+            filename = str(ckpt_fn).replace("_ckpt", "_ckpt_"+str(step))
+            with open(filename, "wb") as f:
+                pickle.dump(
+                    {
+                        "step": step,
+                        "params": params,
+                        "aux": aux,
+                        "rng": rng,
+                        "optim_state": optim_state,
+                    },
+                    f,
+                )
             with open(ckpt_fn, "wb") as f:
                 pickle.dump(
                     {
