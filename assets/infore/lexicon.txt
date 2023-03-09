@@ -2696,7 +2696,7 @@ riềng	r i ề n g
 ro	r o
 roi	r o i
 rong	r o n g
-ru	r u
+ru	r u 
 rua	r u a
 run	r u n
 rung	r u n g
@@ -3827,6 +3827,7 @@ vữa	v ữ a
 vững	v ữ n g
 vực	v ự c
 vựng	v ự n g
+x	x
 xa	x a
 xanh	x a n h
 xao	x a o
